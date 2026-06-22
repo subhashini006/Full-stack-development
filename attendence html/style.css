@@ -1,0 +1,24 @@
+h1{
+    color:#0A4D68;
+}
+
+h3{
+    color:#205295;
+}
+
+table{
+    width:90%;
+    margin:auto;
+    border-collapse:collapse;
+    background-color:white;
+}
+
+th{
+    background-color:#0A4D68;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    text-align:center;
+}
