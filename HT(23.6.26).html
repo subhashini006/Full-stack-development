@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Example</title>
+</head>
+
+<body>
+
+<h2 id="text">Welcome to JavaScript</h2>
+
+<button onclick="performAction()">Click Here</button>
+
+<script>
+
+function performAction() {
+
+    // Alert message
+    alert("Button Clicked Successfully!");
+
+    // Change text using DOM
+    document.getElementById("text").innerHTML =
+    "Text Changed Using DOM";
+
+}
+
+</script>
+
+</body>
+</html>
