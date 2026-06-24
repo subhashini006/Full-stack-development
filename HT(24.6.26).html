@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Input Validation</title>
+
+<style>
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background:#E5DAF2;
+}
+
+.container{
+    width:450px;
+    margin:80px auto;
+    padding:20px;
+    background:#C3B1E1;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+h2{
+    text-align:center;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#7753b1;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:rgb(222,222,245);
+    color:black;
+}
+
+#message{
+    margin-top:15px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.success{
+    color:green;
+}
+
+.error{
+    color:red;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Text Input Validation</h2>
+
+<input type="text" id="username" placeholder="Enter Your Name">
+
+<button id="checkBtn">Submit</button>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+
+document.getElementById("checkBtn")
+.addEventListener("click", validateInput);
+
+function validateInput(){
+
+    let username =
+    document.getElementById("username").value.trim();
+
+    let message =
+    document.getElementById("message");
+
+    if(username === ""){
+
+        message.textContent =
+        "Please enter your name";
+
+        message.className = "error";
+
+        return;
+    }
+
+    if(!/^[A-Za-z ]+$/.test(username)){
+
+        message.textContent =
+        "Name should contain only letters";
+
+        message.className = "error";
+
+        return;
+    }
+
+    message.textContent =
+    "Validation Successful";
+
+    message.className = "success";
+
+}
+
+</script>
+
+</body>
+</html>
